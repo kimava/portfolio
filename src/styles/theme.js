@@ -6,6 +6,7 @@ const colors = {
   sageGreen: '#BFD3CF',
   salmonPink: '#FF7070',
   yellow: '#FEC748',
+  black: '#000',
 };
 
 const fonts = {

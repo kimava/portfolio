@@ -6,6 +6,10 @@ ${reset};
 
 ${({ theme }) => {
   return css`
+    html {
+      width: 100vh;
+    }
+
     body {
       font-family: ${theme.fonts.family};
       font-size: ${theme.fonts.size.regular};
