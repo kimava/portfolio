@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 export const HeroContainer = styled.div`
   position: absolute;
   top: 30%;
-  margin: auto;
   width: 70%;
   height: 80vh;
 `;
@@ -28,4 +27,19 @@ export const Word = styled(motion.span)`
 export const Character = styled(motion.span)`
   display: inline-block;
   margin-right: -0.05rem;
+`;
+
+export const DraggableIcons = styled.div`
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 30%;
+`;
+
+export const Image = styled(motion.img)`
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
 `;
