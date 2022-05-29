@@ -1,6 +1,4 @@
 import styled, { css } from 'styled-components';
-import { motion } from 'framer-motion';
-import { IoIosStar } from 'react-icons/io';
 
 export const MenuContainer = styled.div`
   ${({ theme }) => {
@@ -9,7 +7,7 @@ export const MenuContainer = styled.div`
       display: flex;
       justify-content: flex-end;
       padding: ${paddings.base};
-      width: 100vw;
+      width: 100%;
       font-size: ${fonts.size.large};
       font-weight: ${fonts.weight.light};
     `;

@@ -7,7 +7,7 @@ ${reset};
 ${({ theme }) => {
   return css`
     html {
-      width: 100vh;
+      width: 100%;
     }
 
     body {
