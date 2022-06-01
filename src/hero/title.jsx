@@ -1,6 +1,6 @@
-import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
 import { AnimeTitle, Character, Word } from './heroStyles';
 
 const Title = ({ text }) => {

@@ -15,7 +15,7 @@ const fonts = {
     small: '1rem',
     regular: '1.125rem',
     medium: '1.313rem',
-    large: '2.125rem',
+    large: '2rem',
     title: '7rem',
   },
   weight: {

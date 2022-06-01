@@ -3,6 +3,7 @@ import Menu from './menu/menu';
 import Hero from './hero/hero';
 import GlobalStyle from './styles/globalStyle';
 import { defaultTheme } from './styles/theme';
+import About from './about/about';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyle />
       <Menu />
       <Hero />
+      <About />
     </ThemeProvider>
   );
 }

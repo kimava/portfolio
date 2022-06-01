@@ -2,10 +2,14 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 
 export const HeroContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+`;
+
+export const TitleContainer = styled.div`
   position: absolute;
   top: 30%;
   width: 70%;
-  height: 80vh;
 `;
 
 export const AnimeTitle = styled.h1`
