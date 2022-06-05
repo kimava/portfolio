@@ -4,7 +4,7 @@ export const Container = styled.div`
   ${({ theme }) => {
     const { colors, margins, paddings } = theme;
     return css`
-      height: 100vh;
+      margin-bottom: 5rem;
     `;
   }}
 `;

@@ -6,6 +6,7 @@ import { defaultTheme } from './styles/theme';
 import About from './about/about';
 import Projects from './projects/projects';
 import Blog from './blog/blog';
+import Footer from './footer/footer';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Projects />
       <Blog />
+      <Footer />
     </ThemeProvider>
   );
 }
