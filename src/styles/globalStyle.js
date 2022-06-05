@@ -6,6 +6,10 @@ ${reset};
 
 ${({ theme }) => {
   return css`
+    * {
+      box-sizing: border-box;
+    }
+
     html {
       width: 100%;
     }

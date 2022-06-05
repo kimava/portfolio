@@ -10,7 +10,6 @@ export const Container = styled(motion.div)`
       justify-content: center;
       align-items: center;
       height: 100vh;
-      border-top: 1px solid black;
     `;
   }}
 `;
