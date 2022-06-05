@@ -4,7 +4,6 @@ export const Container = styled.div`
   ${({ theme }) => {
     return css`
       width: 90%;
-      height: 100vh;
       margin: auto;
       line-height: 1.5rem;
     `;

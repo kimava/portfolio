@@ -5,6 +5,7 @@ import GlobalStyle from './styles/globalStyle';
 import { defaultTheme } from './styles/theme';
 import About from './about/about';
 import Projects from './projects/projects';
+import Blog from './blog/blog';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
+      <Blog />
     </ThemeProvider>
   );
 }
