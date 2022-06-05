@@ -1,80 +1,28 @@
 import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
-import avatar from '../assets/avatar.png';
+import avatar from '../assets/avatar.jpeg';
 
 export const Container = styled(motion.div)`
   ${({ theme }) => {
     return css`
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      border-top: 1px solid black;
     `;
   }}
 `;
 
-export const OuterContainer = styled(motion.div)`
-  ${({ theme }) => {
-    const { colors } = theme;
-    return css`
-      position: relative;
-      margin: auto;
-      width: 90%;
-      height: 75vh;
-      background-color: ${colors.yellow};
-      border: 1px solid ${colors.black};
-      border-radius: 10px;
-    `;
-  }}
-`;
-
-export const MiddleContainer = styled(motion.div)`
-  ${({ theme }) => {
-    const { colors } = theme;
-    return css`
-      position: absolute;
-      top: 0rem;
-      right: 0rem;
-      margin: auto;
-      width: 100%;
-      height: 75vh;
-      background-color: ${colors.purple};
-      border: 1px solid ${colors.black};
-      border-radius: 10px;
-    `;
-  }}
-`;
-
-export const AboutContainer = styled(motion.div)`
-  ${({ theme }) => {
-    const { colors, fonts, margins } = theme;
-    return css`
-      position: absolute;
-      top: 0rem;
-      right: 0rem;
-      width: 100%;
-      height: 75vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-      border: 1px solid ${colors.black};
-      border-radius: 10px;
-
-      p {
-        margin-bottom: ${margins.small};
-        line-height: 1.6rem;
-        font-size: ${fonts.size.medium};
-      }
-    `;
-  }}
-`;
-
-export const Avatar = styled(motion.img)`
-  display: inline-block;
-  margin: 1rem;
-  max-width: 400px;
-  max-height: 300px;
+export const Avatar = styled.div`
+  margin-bottom: 2rem;
+  width: 250px;
+  height: 250px;
+  background-image: url(${avatar});
+  background-position: center center;
+  background-size: contain;
+  border-radius: 50%;
 `;
 
 export const Content = styled.div`
@@ -82,10 +30,17 @@ export const Content = styled.div`
     const { fonts, margins, paddings } = theme;
     return css`
       padding: ${paddings.base};
+      text-align: center;
+
       h1 {
-        margin-bottom: ${margins.small};
+        margin-bottom: ${margins.base};
         font-size: ${fonts.size.large};
         font-weight: ${fonts.weight.normal};
+      }
+
+      p {
+        margin-bottom: 1rem;
+        line-height: 1.4rem;
       }
     `;
   }}
@@ -102,13 +57,41 @@ export const LinkBtn = styled(motion.button)`
       margin: ${margins.small};
       margin-top: ${margins.medium};
       padding: 0 ${paddings.medium};
+      position: relative;
+      width: 10rem;
       height: 3rem;
       font: inherit;
+      background-color: #fff;
+      border 3px solid black;
+      transform-origin: right bottom;
 
-      line-height: 3rem;
-      border: 1px solid ${colors.black};
-      border-radius: 25px;
-      background-color: ${colors.sageGreen};
+      &:before,
+      &:after {
+          border 3px solid black;
+          content: '';
+          display: block;
+          position: absolute;
+          background-color: black;
+      }
+    
+      &:before {
+          bottom: -11px;
+          left: 2px;
+          width: 100%;
+          height: 3px;
+          transform: skewX(45deg);
+          background-color: black;
+      }
+    
+      &:after {
+          right: -12px;
+          bottom: -7px;
+          height: 100%;
+          width: 3px;
+          transform: skewY(45deg);
+          background-color: black;
+      }
+
 
       &:nth-child(1) {
         margin-left: 0;
