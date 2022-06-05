@@ -12,7 +12,7 @@ ${({ theme }) => {
 
     body {
       font-family: ${theme.fonts.family};
-      font-size: ${theme.fonts.size.regular};
+      font-size: ${theme.fonts.size.small};
     }
   `;
 }}

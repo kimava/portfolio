@@ -4,6 +4,7 @@ import Hero from './hero/hero';
 import GlobalStyle from './styles/globalStyle';
 import { defaultTheme } from './styles/theme';
 import About from './about/about';
+import Projects from './projects/projects';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Menu />
       <Hero />
       <About />
+      <Projects />
     </ThemeProvider>
   );
 }
