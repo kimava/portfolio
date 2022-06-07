@@ -27,10 +27,16 @@ const Projects = () => {
                   return <span key={i}>{i}</span>;
                 })}
               </div>
-              <a>관련 포스트 보기 →</a>
+              <a href={item.blogLink} target='_blank'>
+                관련 포스트 보기 →
+              </a>
               <Link>
-                <BsGithub className='github' />
-                <FiExternalLink className='link' />
+                <a href={item.gitLink} target='_blank'>
+                  <BsGithub className='github' />
+                </a>
+                <a href={item.projectLink} target='_blank'>
+                  <FiExternalLink className='link' />
+                </a>
               </Link>
             </ContentBox>
           </Project>

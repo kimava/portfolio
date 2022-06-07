@@ -17,7 +17,7 @@ export const ProjectItems = [
     ],
     gitLink: `https://github.com/kimava/v32-toucans-team-02`,
     projectLink: `https://ava-booklog.netlify.app/`,
-    blogLink: ``,
+    blogLink: `https://velog.io/@avakim/Google-Cloud-Platform-%EB%B8%94%EB%9D%BD-%EB%A8%B9%EC%9D%80-%EC%8D%B0`,
   },
 
   {

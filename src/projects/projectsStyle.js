@@ -108,8 +108,10 @@ export const ContentBox = styled.div`
       }
 
       a {
-        display: block;
         margin-bottom: ${margins.small};
+        display: block;
+        color: inherit;
+        text-decoration: none;
       }
     `;
   }}
@@ -121,13 +123,19 @@ export const Link = styled.div`
     return css`
       margin-bottom: 0;
 
+      a {
+        display: inline-block;
+      }
+
       .github,
       .link {
         margin-right: ${margins.base};
         font-size: ${fonts.size.medium};
         color: ${colors.gray};
+        transition: all 0.3s ease;
 
         &:hover {
+          color: ${colors.black};
           cursor: pointer;
         }
       }
