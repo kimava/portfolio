@@ -23,6 +23,19 @@ export const Links = styled.div`
       font-size: ${fonts.size.xsmall};
       text-transform: uppercase;
       }
+
+      button {
+        width: 12rem;
+        font: inherit;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
     `;
   }}
 `;
