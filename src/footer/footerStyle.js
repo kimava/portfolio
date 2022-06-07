@@ -14,12 +14,13 @@ export const Container = styled.div`
 
 export const Links = styled.div`
   ${({ theme }) => {
+    const { fonts, paddings } = theme;
     return css`
-      padding: 2rem;
+      padding: ${paddings.large};
       display: flex;
       justify-content: space-between;
       width: 100%;
-      font-size: 0.9rem;
+      font-size: ${fonts.size.xsmall};
       text-transform: uppercase;
       }
     `;

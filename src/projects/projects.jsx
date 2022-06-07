@@ -24,7 +24,7 @@ const Projects = () => {
               <p>{item.desc}</p>
               <div>
                 {item.stack.map((i) => {
-                  return <span>{i}</span>;
+                  return <span key={i}>{i}</span>;
                 })}
               </div>
               <a>관련 포스트 보기 →</a>

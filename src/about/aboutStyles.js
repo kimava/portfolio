@@ -15,13 +15,19 @@ export const Container = styled(motion.div)`
 `;
 
 export const Avatar = styled.div`
-  margin-bottom: 2rem;
-  width: 250px;
-  height: 250px;
-  background-image: url(${avatar});
-  background-position: center center;
-  background-size: contain;
-  border-radius: 50%;
+  ${({ theme }) => {
+    const { margins } = theme;
+
+    return css`
+      margin-bottom: ${margins.large};
+      width: 250px;
+      height: 250px;
+      background-image: url(${avatar});
+      background-position: center center;
+      background-size: contain;
+      border-radius: 50%;
+    `;
+  }}
 `;
 
 export const Content = styled.div`
@@ -38,7 +44,7 @@ export const Content = styled.div`
       }
 
       p {
-        margin-bottom: 1rem;
+        margin-bottom: ${margins.base};
         line-height: 1.4rem;
       }
     `;
@@ -60,37 +66,37 @@ export const LinkBtn = styled(motion.button)`
       width: 10rem;
       height: 3rem;
       font: inherit;
-      background-color: #fff;
-      border 3px solid black;
+      color: ${colors.black};
+      background-color: ${colors.white};
+      border: 3px solid ${colors.black};
       transform-origin: right bottom;
 
       &:before,
       &:after {
-          border 3px solid black;
-          content: '';
-          display: block;
-          position: absolute;
-          background-color: black;
-      }
-    
-      &:before {
-          bottom: -11px;
-          left: 2px;
-          width: 100%;
-          height: 3px;
-          transform: skewX(45deg);
-          background-color: black;
-      }
-    
-      &:after {
-          right: -12px;
-          bottom: -7px;
-          height: 100%;
-          width: 3px;
-          transform: skewY(45deg);
-          background-color: black;
+        position: absolute;
+        display: block;
+        content: '';
+        border: 3px solid ${colors.black};
+        background-color: ${colors.black};
       }
 
+      &:before {
+        bottom: -11px;
+        left: 2px;
+        width: 100%;
+        height: 3px;
+        transform: skewX(45deg);
+        background-color: ${colors.black};
+      }
+
+      &:after {
+        bottom: -7px;
+        right: -12px;
+        width: 3px;
+        height: 100%;
+        transform: skewY(45deg);
+        background-color: ${colors.black};
+      }
 
       &:nth-child(1) {
         margin-left: 0;

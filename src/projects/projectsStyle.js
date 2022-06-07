@@ -3,113 +3,134 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   ${({ theme }) => {
     return css`
-      width: 90%;
       margin: auto;
+      width: 90%;
       line-height: 1.5rem;
     `;
   }}
 `;
 
 export const Project = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    position: relative;
-    margin-bottom: 3rem;
-    width: 90%;
-    height: 25rem;
-    border: 3px solid black;
-    transform-origin: right bottom;
+  ${({ theme }) => {
+    const { colors, margins } = theme;
+    return css`
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+      margin-bottom: ${margins.xlarge};
+      width: 90%;
+      height: 25rem;
+      border: 3px solid ${colors.black};
+      transform-origin: right bottom;
 
       &:before,
       &:after {
-          border 3px solid black;
-          content: '';
-          display: block;
-          position: absolute;
-          background-color: black;
+        display: block;
+        position: absolute;
+        content: '';
+        border: 3px solid ${colors.black};
+        background-color: ${colors.black};
       }
 
       &:before {
-          bottom: -24px;
-          left: 7px;
-          width: 100%;
-          height: 15px;
-          transform: skewX(45deg);
-          background-color: black;
+        bottom: -24px;
+        left: 7px;
+        width: 100%;
+        height: 15px;
+        transform: skewX(45deg);
+        background-color: ${colors.black};
       }
 
       &:after {
-          right: -23px;
-          bottom: -13px;
-          height: 100%;
-          width: 15px;
-          transform: skewY(45deg);
-          background-color: black;
+        bottom: -13px;
+        right: -23px;
+        width: 15px;
+        height: 100%;
+        transform: skewY(45deg);
+        background-color: ${colors.black};
       }
 
       &:nth-child(2) {
-          flex-direction: row-reverse;
+        margin-left: 10%;
+        flex-direction: row-reverse;
       }
+    `;
+  }}
 `;
 
 export const ThumbBox = styled.div`
-  display: flex;
-  flex: 1;
-  padding: 1.5rem;
-  height: 88%;
-  align-items: center;
-  border: 1px solid black;
+  ${({ theme }) => {
+    const { colors, paddings } = theme;
+    return css`
+      display: flex;
+      flex: 1;
+      padding: ${paddings.medium};
+      height: 100%;
+      align-items: center;
+      border: 1px solid ${colors.black};
 
-  img {
-    width: 100%;
-  }
+      img {
+        width: 100%;
+      }
+    `;
+  }}
 `;
 
 export const ContentBox = styled.div`
   ${({ theme }) => {
+    const { colors, fonts, margins, paddings } = theme;
     return css`
-      padding: 1.5rem;
+      padding: ${paddings.medium};
       display: flex;
       flex-direction: column;
       justify-content: center;
       flex: 2;
-      height: 88%;
-      border: 1px solid black;
+      height: 100%;
+      border: 1px solid ${colors.black};
 
       h3 {
-        margin-bottom: 1.5rem;
+        margin-bottom: ${margins.medium};
       }
 
       p {
-        margin-bottom: 1rem;
+        margin-bottom: ${margins.base};
       }
 
       div {
-        margin-bottom: 1rem;
+        margin-bottom: ${margins.base};
       }
 
       span {
-        margin-right: 1rem;
-        font-size: 0.9rem;
-        color: #696969;
+        margin-right: ${margins.base};
+        font-size: ${fonts.size.xsmall};
+        color: ${colors.gray};
       }
 
       a {
         display: block;
-        margin-bottom: 0.5rem;
+        margin-bottom: ${margins.small};
       }
     `;
   }}
 `;
 
 export const Link = styled.div`
-  margin-bottom: 0;
+  ${({ theme }) => {
+    const { colors, fonts, margins } = theme;
+    return css`
+      margin-bottom: 0;
 
-  .github,
-  .link {
-    margin-right: 1rem;
-    font-size: 1.3rem;
-    color: #696969;
-  }
+      .github,
+      .link {
+        margin-right: ${margins.base};
+        font-size: ${fonts.size.medium};
+        color: ${colors.gray};
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    `;
+  }}
 `;

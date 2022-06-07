@@ -7,11 +7,14 @@ const colors = {
   salmonPink: '#FF7070',
   yellow: '#FEC748',
   black: '#000',
+  gray: '#696969',
+  white: '#fff',
 };
 
 const fonts = {
   family: `'Inter', 'IBM Plex Sans KR', sans-serif`,
   size: {
+    xsmall: '0.9rem',
     small: '1rem',
     regular: '1.125rem',
     medium: '1.313rem',
@@ -31,6 +34,7 @@ const margins = {
   base: '1rem',
   medium: '1.5rem',
   large: '2rem',
+  xlarge: '3rem',
 };
 
 const paddings = {
@@ -38,6 +42,7 @@ const paddings = {
   base: '1rem',
   medium: '1.5rem',
   large: '2rem',
+  xlarge: '3rem',
 };
 
 export const defaultTheme = {

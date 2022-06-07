@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  HeroContainer,
-  TitleContainer,
-  DraggableIcons,
-  Image,
-} from './heroStyles';
+import { HeroContainer, TitleContainer, Icon, Image } from './heroStyles';
 import Title from './title';
-import handheart from '../assets/handheart.gif';
 import heart from '../assets/heart.png';
 
 const Hero = () => {
@@ -16,16 +10,23 @@ const Hero = () => {
         <Title text='FRONTEND DEVELOPER' />
         <Title text='& &nbsp; PHILOMATH' />
       </TitleContainer>
-      <DraggableIcons>
+      <Icon>
         <Image
           src={heart}
-          whileTap={{ scale: 0.9 }}
-          drag={true}
-          dragConstraints={{ left: 100, right: 40, top: 40, bottom: 50 }}
           initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1 } }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: 'spring',
+              bounce: 0.6,
+              duration: 0.9,
+              ease: 'easeInOut',
+              delay: 1.1,
+            },
+          }}
         />
-      </DraggableIcons>
+      </Icon>
     </HeroContainer>
   );
 };

@@ -8,7 +8,7 @@ const About = () => {
       <Content>
         <h1>Hi, there 😉</h1>
         <p>
-          평생 공부하는 학자를 꿈꾸는 개발자 Ava 입니다. <br />
+          평생 공부하는 삶을 꿈꾸는 개발자 Ava 입니다. <br />
           새로운 것을 배우고 실제로 적용해 보는 데 즐거움을 느낍니다.
         </p>
         <p>
@@ -19,9 +19,9 @@ const About = () => {
         </p>
         <p>선택에 '근거가 있는' 개발자가 되고자 노력합니다.</p>
         <Btns>
-          <LinkBtn whileHover={{ scale: 1.1 }}>LINKED IN</LinkBtn>
-          <LinkBtn whileHover={{ scale: 1.1 }}>GITHUB</LinkBtn>
-          <LinkBtn whileHover={{ scale: 1.1 }}>BLOG</LinkBtn>
+          <LinkBtn>LINKED IN</LinkBtn>
+          <LinkBtn>GITHUB</LinkBtn>
+          <LinkBtn>BLOG</LinkBtn>
         </Btns>
       </Content>
     </Container>

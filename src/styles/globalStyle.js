@@ -5,6 +5,8 @@ const GlobalStyle = createGlobalStyle`
 ${reset};
 
 ${({ theme }) => {
+  const { colors, fonts } = theme;
+
   return css`
     * {
       box-sizing: border-box;
@@ -15,8 +17,17 @@ ${({ theme }) => {
     }
 
     body {
-      font-family: ${theme.fonts.family};
-      font-size: ${theme.fonts.size.small};
+      font-family: ${fonts.family};
+      font-size: ${fonts.size.small};
+      color: ${colors.black},
+      background-color: ${colors.white};
+
+      button,
+      a {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   `;
 }}
