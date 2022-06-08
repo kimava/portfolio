@@ -1,11 +1,11 @@
 export const MenuItems = [
   {
-    name: 'ABOUT',
+    name: 'about',
   },
   {
-    name: 'PORTPOLIO',
+    name: 'portfolio',
   },
   {
-    name: 'BLOG',
+    name: 'blog',
   },
 ];

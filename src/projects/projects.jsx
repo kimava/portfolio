@@ -12,7 +12,7 @@ import {
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id='portfolio'>
       {ProjectItems.map((item) => {
         return (
           <Project key={item.title}>

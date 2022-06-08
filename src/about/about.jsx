@@ -4,7 +4,7 @@ import { Container, Content, Btns, LinkBtn, Avatar } from './aboutStyles';
 
 const About = () => {
   return (
-    <Container>
+    <Container id='about'>
       <Avatar />
       <Content>
         <h1>Hi, there 😉</h1>

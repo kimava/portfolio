@@ -4,7 +4,7 @@ import { Container, Post } from './blogStyle';
 
 const Blog = () => {
   return (
-    <Container>
+    <Container id='blog'>
       {Posts.map((post) => {
         return (
           <Post key={post.title}>

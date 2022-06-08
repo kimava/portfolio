@@ -11,6 +11,7 @@ export const MenuContainer = styled.div`
       display: flex;
       justify-content: flex-end;
       width: 100%;
+      text-transform: uppercase;
       font-size: ${fonts.size.medium};
       font-weight: ${fonts.weight.light};
       background-color: ${colors.white};
@@ -27,14 +28,19 @@ export const MenuBar = styled.ul`
       display: flex;
       justify-content: flex-end;
 
+      a {
+        display: inline-block;
+        width: 10rem;
+        height: 100%;
+        line-height: 2.5rem;
+        text-align: center;
+      }
+
       li {
         margin-right: ${margins.medium};
-        padding: 0 ${paddings.base};
         position: relative;
         width: 10rem;
         height: 3rem;
-        text-align: center;
-        line-height: 3rem;
         border: 3px solid ${colors.black};
         transition: all 0.2s ease-out;
         transform-origin: right bottom;
