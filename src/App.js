@@ -7,6 +7,7 @@ import About from './about/about';
 import Projects from './projects/projects';
 import Blog from './blog/blog';
 import Footer from './footer/footer';
+import ScrollToTop from './common/scrollToTop';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Projects />
       <Blog />
       <Footer />
+      <ScrollToTop />
     </ThemeProvider>
   );
 }
