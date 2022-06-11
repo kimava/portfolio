@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Post = styled(LargeBox)`
   ${({ theme }) => {
-    const { colors, fonts, margins, paddings } = theme;
+    const { colors, device, fonts, margins, paddings } = theme;
     return css`
       margin: auto;
       margin-bottom: ${margins.large};
@@ -39,6 +39,12 @@ export const Post = styled(LargeBox)`
       &:nth-child(3) {
         &:hover {
           background-color: ${colors.green};
+        }
+      }
+
+      ${device.mobile} {
+        a {
+          font-size: ${fonts.size.medium};
         }
       }
     `;

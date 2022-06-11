@@ -4,12 +4,19 @@ import avatar from '../assets/avatar.jpeg';
 
 export const Container = styled(motion.div)`
   ${({ theme }) => {
+    const { device, margins } = theme;
     return css`
+      margin: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 95%;
       height: 100vh;
+
+      ${device.mobile} {
+        width: 100%;
+      }
     `;
   }}
 `;
@@ -32,7 +39,7 @@ export const Avatar = styled.div`
 
 export const Content = styled.div`
   ${({ theme }) => {
-    const { fonts, margins, paddings } = theme;
+    const { device, fonts, margins, paddings } = theme;
     return css`
       padding: ${paddings.base};
       text-align: center;
@@ -47,13 +54,18 @@ export const Content = styled.div`
         margin-bottom: ${margins.base};
         line-height: 1.4rem;
       }
+
+      ${device.mobile} {
+        width: 100%;
+        font-size: ${fonts.size.xsmall};
+      }
     `;
   }}
 `;
 
 export const Links = styled.div`
   ${({ theme }) => {
-    const { colors, margins, paddings } = theme;
+    const { colors, device, margins, paddings } = theme;
     return css`
       display: flex;
       text-transform: uppercase;
@@ -102,6 +114,15 @@ export const Links = styled.div`
 
         &:nth-child(1) {
           margin-left: 0;
+        }
+      }
+
+      ${device.mobile} {
+        flex-direction: column;
+
+        a {
+          margin: 0 0 ${margins.base} 0;
+          width: 100%;
         }
       }
     `;

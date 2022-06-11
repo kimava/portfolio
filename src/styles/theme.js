@@ -11,6 +11,12 @@ const colors = {
   white: '#fff',
 };
 
+const device = {
+  mobile: `@media screen and (max-width: 26.5rem)`,
+  tablet: `@media screen and (max-width: 48rem)`,
+  desktop: `@media screen and (max-width: 72.5rem)`,
+};
+
 const fonts = {
   family: `'Inter', 'IBM Plex Sans KR', sans-serif`,
   size: {
@@ -19,6 +25,7 @@ const fonts = {
     regular: '1.125rem',
     medium: '1.313rem',
     large: '2rem',
+    mediumTitle: '6rem',
     title: '7rem',
   },
   weight: {
@@ -47,6 +54,7 @@ const paddings = {
 
 export const defaultTheme = {
   colors,
+  device,
   fonts,
   margins,
   paddings,

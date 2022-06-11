@@ -12,11 +12,9 @@ ${({ theme }) => {
       box-sizing: border-box;
     }
 
-    html {
-      width: 100%;
-    }
-
     body {
+      margin: auto;
+      max-width: 80rem;
       font-family: ${fonts.family};
       font-size: ${fonts.size.small};
       color: ${colors.black},

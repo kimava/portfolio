@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Links = styled.div`
   ${({ theme }) => {
-    const { fonts, paddings } = theme;
+    const { device, fonts, paddings, margins } = theme;
     return css`
       padding: ${paddings.large};
       display: flex;
@@ -35,6 +35,19 @@ export const Links = styled.div`
       a {
         color: inherit;
         text-decoration: none;
+      }
+
+      ${device.mobile} {
+        flex-direction: column;
+        align-items: center;
+
+        button {
+          margin-bottom: ${margins.small};
+        }
+
+        a {
+          margin-bottom: ${margins.small};
+        }
       }
     `;
   }}

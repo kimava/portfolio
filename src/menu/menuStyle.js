@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components';
+import { FaBars } from 'react-icons/fa';
 import { Box } from '../common/boxes';
 
 export const MenuContainer = styled.div`
   ${({ theme }) => {
-    const { colors, fonts, paddings } = theme;
+    const { colors, device, fonts, paddings } = theme;
     return css`
       padding: ${paddings.base};
       position: fixed;
@@ -17,6 +18,10 @@ export const MenuContainer = styled.div`
       font-weight: ${fonts.weight.light};
       background-color: ${colors.white};
       z-index: 10;
+
+      ${device.mobile} {
+        display: none;
+      }
     `;
   }}
 `;

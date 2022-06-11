@@ -5,7 +5,9 @@ export const Container = styled.div`
   ${({ theme }) => {
     return css`
       margin: auto;
+      padding-top: 5rem;
       width: 90%;
+      height: auto;
       line-height: 1.5rem;
     `;
   }}
@@ -13,7 +15,7 @@ export const Container = styled.div`
 
 export const Project = styled(LargeBox)`
   ${({ theme }) => {
-    const { margins } = theme;
+    const { colors, device, margins } = theme;
     return css`
       display: flex;
       flex-wrap: wrap;
@@ -23,6 +25,31 @@ export const Project = styled(LargeBox)`
       &:nth-child(2) {
         margin-left: 10%;
         flex-direction: row-reverse;
+
+        ${ThumbBox} {
+          border-right: none;
+          border-left: 3px solid ${colors.black};
+        }
+      }
+
+      ${device.mobile} {
+        flex-direction: column;
+        height: auto;
+        &:nth-child(2) {
+          margin-left: 0;
+          flex-direction: column;
+        }
+
+        &:nth-child(2) {
+          ${ThumbBox} {
+            border-left: none;
+          }
+        }
+
+        ${ThumbBox} {
+          border: none;
+          border-bottom: 3px solid ${colors.black};
+        }
       }
     `;
   }}
@@ -30,17 +57,20 @@ export const Project = styled(LargeBox)`
 
 export const ThumbBox = styled.div`
   ${({ theme }) => {
-    const { colors, paddings } = theme;
+    const { colors, device, paddings } = theme;
     return css`
       display: flex;
       flex: 1;
       padding: ${paddings.medium};
       height: 100%;
       align-items: center;
-      border: 1px solid ${colors.black};
+      border-right: 3px solid ${colors.black};
 
       img {
         width: 100%;
+      }
+      ${device.mobile} {
+        flex: 1;
       }
     `;
   }}
@@ -48,7 +78,7 @@ export const ThumbBox = styled.div`
 
 export const ContentBox = styled.div`
   ${({ theme }) => {
-    const { colors, fonts, margins, paddings } = theme;
+    const { colors, device, fonts, margins, paddings } = theme;
     return css`
       padding: ${paddings.medium};
       display: flex;
@@ -56,9 +86,10 @@ export const ContentBox = styled.div`
       justify-content: center;
       flex: 2;
       height: 100%;
-      border: 1px solid ${colors.black};
+      overflow-y: scroll;
 
       h3 {
+        margin-top: ${margins.small};
         margin-bottom: ${margins.medium};
       }
 
