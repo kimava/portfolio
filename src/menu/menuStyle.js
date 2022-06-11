@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Box } from '../common/boxes';
 
 export const MenuContainer = styled.div`
   ${({ theme }) => {
@@ -22,7 +23,7 @@ export const MenuContainer = styled.div`
 
 export const MenuBar = styled.ul`
   ${({ theme }) => {
-    const { colors, margins, paddings } = theme;
+    const { margins, paddings } = theme;
     return css`
       padding-right: ${paddings.large};
       display: flex;
@@ -36,49 +37,16 @@ export const MenuBar = styled.ul`
         text-align: center;
       }
 
-      li {
+      ${Box} {
         margin-right: ${margins.medium};
-        position: relative;
-        width: 10rem;
-        height: 3rem;
-        border: 3px solid ${colors.black};
-        transition: all 0.2s ease-out;
-        transform-origin: right bottom;
-
-        &:before,
-        &:after {
-          display: block;
-          position: absolute;
-          content: '';
-          border: 3px solid ${colors.black};
-          background-color: ${colors.black};
-        }
-
-        &:before {
-          bottom: -11px;
-          left: 2px;
-          width: 100%;
-          height: 3px;
-          transform: skewX(45deg);
-          background-color: ${colors.black};
-        }
-
-        &:after {
-          bottom: -7px;
-          right: -12px;
-          width: 3px;
-          height: 100%;
-          transform: skewY(45deg);
-          background-color: ${colors.black};
-        }
 
         &:hover {
           cursor: pointer;
         }
-      }
 
-      li:last-child {
-        margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     `;
   }}

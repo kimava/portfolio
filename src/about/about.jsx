@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactLinks from '../common/contacLinks';
-import { Container, Content, Btns, LinkBtn, Avatar } from './aboutStyles';
+import { Container, Content, Links, Avatar } from './aboutStyles';
 
 const About = () => {
   return (
@@ -19,9 +19,9 @@ const About = () => {
           싶습니다.
         </p>
         <p>선택에 '근거가 있는' 개발자가 되고자 노력합니다.</p>
-        <Btns>
+        <Links>
           <ContactLinks />
-        </Btns>
+        </Links>
       </Content>
     </Container>
   );

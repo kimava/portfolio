@@ -51,7 +51,7 @@ export const Content = styled.div`
   }}
 `;
 
-export const Btns = styled.div`
+export const Links = styled.div`
   ${({ theme }) => {
     const { colors, margins, paddings } = theme;
     return css`

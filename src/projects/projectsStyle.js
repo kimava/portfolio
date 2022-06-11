@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { LargeBox } from '../common/boxes';
 
 export const Container = styled.div`
   ${({ theme }) => {
@@ -10,46 +11,14 @@ export const Container = styled.div`
   }}
 `;
 
-export const Project = styled.div`
+export const Project = styled(LargeBox)`
   ${({ theme }) => {
-    const { colors, margins } = theme;
+    const { margins } = theme;
     return css`
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      position: relative;
       margin-bottom: ${margins.xlarge};
-      width: 90%;
-      height: 25rem;
-      border: 3px solid ${colors.black};
-      transform-origin: right bottom;
-
-      &:before,
-      &:after {
-        display: block;
-        position: absolute;
-        content: '';
-        border: 3px solid ${colors.black};
-        background-color: ${colors.black};
-      }
-
-      &:before {
-        bottom: -24px;
-        left: 7px;
-        width: 100%;
-        height: 15px;
-        transform: skewX(45deg);
-        background-color: ${colors.black};
-      }
-
-      &:after {
-        bottom: -13px;
-        right: -23px;
-        width: 15px;
-        height: 100%;
-        transform: skewY(45deg);
-        background-color: ${colors.black};
-      }
 
       &:nth-child(2) {
         margin-left: 10%;

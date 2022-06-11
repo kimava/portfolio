@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '../about/aboutStyles';
 
 const ContactLinks = () => {
   return (

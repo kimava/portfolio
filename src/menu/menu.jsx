@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import { Box } from '../common/boxes';
 import { MenuItems } from './menuItems';
 import { MenuBar, MenuContainer } from './menuStyle';
 
@@ -9,11 +10,11 @@ const Menu = () => {
       <MenuBar>
         {MenuItems.map((item) => {
           return (
-            <li key={item.name}>
+            <Box key={item.name}>
               <Link to={item.name} smooth={true}>
                 {item.name}
               </Link>
-            </li>
+            </Box>
           );
         })}
       </MenuBar>
