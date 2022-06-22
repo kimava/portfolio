@@ -8,7 +8,9 @@ const Blog = () => {
       {Posts.map((post) => {
         return (
           <Post key={post.title}>
-            <a>{post.title}</a>
+            <a href={post.link} target='blank'>
+              {post.title}
+            </a>
           </Post>
         );
       })}

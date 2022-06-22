@@ -22,8 +22,10 @@ export const Post = styled(LargeBox)`
       a {
         padding-left: ${paddings.base};
         display: block;
+        color: inherit;
         line-height: 5rem;
         font-size: ${fonts.size.large};
+        text-decoration: none;
       }
 
       &:hover {

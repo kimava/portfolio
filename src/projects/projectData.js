@@ -17,7 +17,7 @@ export const ProjectItems = [
     ],
     gitLink: `https://github.com/kimava/v32-toucans-team-02`,
     projectLink: `https://ava-booklog.netlify.app/`,
-    blogLink: `https://velog.io/@avakim/Google-Cloud-Platform-%EB%B8%94%EB%9D%BD-%EB%A8%B9%EC%9D%80-%EC%8D%B0`,
+    blogLink: `https://velog.io/@avakim/Search-Page-Context-API-%EC%82%AC%EC%9A%A9%EC%9D%98-%EC%9E%98%EB%AA%BB%EB%90%9C-%EC%98%88`,
   },
 
   {
@@ -36,7 +36,7 @@ export const ProjectItems = [
       'Firebase Realtime DB',
     ],
     gitLink: `https://github.com/kimava/journal`,
-    projectLink: `https://ava-booklog.netlify.app/`,
-    blogLink: ``,
+    projectLink: `https://avajournal.netlify.app/`,
+    blogLink: `https://velog.io/@avakim/Firebase-Realtime-DB%EC%97%90%EC%84%9C-%EC%9D%BD%EC%96%B4-%EC%98%A8-%EB%8D%B0%EC%9D%B4%ED%84%B0-Redux-store%EC%97%90-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%ED%95%98%EA%B8%B0-Redux-thunk-%EC%9D%B4%EC%9A%A9`,
   },
 ];
