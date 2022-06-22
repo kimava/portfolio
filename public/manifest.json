@@ -3,9 +3,9 @@
   "name": "Ava's personal portfolio",
   "icons": [
     {
-      "src": "favicon.ico",
-      "type": "image/x-icon",
-      "sizes": "64x64 32x32 24x24 16x16"
+      "src": "favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
     },
     {
       "src": "logo192.png",
