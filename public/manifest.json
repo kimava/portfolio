@@ -3,14 +3,19 @@
   "name": "Ava's personal portfolio",
   "icons": [
     {
-      "src": "logo.png",
-      "type": "image/png",
-      "sizes": "96x96"
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "64x64 32x32 24x24 16x16"
     },
     {
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
