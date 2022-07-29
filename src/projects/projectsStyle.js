@@ -1,14 +1,22 @@
-import styled, { css } from 'styled-components';
-import { LargeBox } from '../common/boxes';
+import styled, { css } from "styled-components";
+import { LargeBox } from "../common/boxes";
 
 export const Container = styled.div`
   ${({ theme }) => {
+    const { paddings, device } = theme;
     return css`
       margin: auto;
       padding-top: 5rem;
       width: 90%;
       height: auto;
       line-height: 1.5rem;
+
+      ${device.mobile} {
+        margin: 0;
+        width: 100%;
+        padding: ${paddings.base};
+        }
+      }
     `;
   }}
 `;
@@ -34,6 +42,7 @@ export const Project = styled(LargeBox)`
 
       ${device.mobile} {
         flex-direction: column;
+        width: 100%;
         height: auto;
         &:nth-child(2) {
           margin-left: 0;

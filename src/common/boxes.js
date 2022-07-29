@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Box = styled.div`
   ${({ theme }) => {
@@ -14,7 +14,7 @@ export const Box = styled.div`
       &:after {
         display: block;
         position: absolute;
-        content: '';
+        content: "";
         border: 3px solid ${colors.black};
         background-color: ${colors.black};
       }
@@ -42,7 +42,7 @@ export const Box = styled.div`
 
 export const LargeBox = styled(Box)`
   ${({ theme }) => {
-    const { colors } = theme;
+    const { device } = theme;
     return css`
       width: 90%;
       height: 25rem;
@@ -57,6 +57,19 @@ export const LargeBox = styled(Box)`
         right: -23px;
         bottom: -13px;
         width: 15px;
+      }
+
+      ${device.mobile} {
+        &:before {
+          left: 2px;
+          bottom: -11px;
+          height: 3px;
+        }
+  
+        &:after {
+          right: -12px;
+          bottom: -7px;
+          width: 3px;
       }
     `;
   }}
